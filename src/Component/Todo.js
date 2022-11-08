@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ( { todo, toggleComplete }) => {
+const Todo = ( { todo, toggleComplete, removeTodo }) => {
   const handleCheckboxClick = () => {
     toggleComplete(todo.id)
   }
@@ -18,7 +18,7 @@ return (
     }}
     >
     {todo.task}</li>
-    <button onclick={handleRemoveClick}>X</button>
+    <button onClick={handleRemoveClick}>X</button>
   </div>
 )
 }
