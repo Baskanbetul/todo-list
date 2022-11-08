@@ -25,13 +25,16 @@ const App = () => {
     )
   }
 
+  const removeTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>To do List</p>
         <TodoForm addTodo={addTodo}/>
-        <TodoList todos={todos} toggleComplete={toggleComplete}/>
-        
+        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo}/>
       </header>
     </div>
   );
