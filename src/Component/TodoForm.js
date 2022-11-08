@@ -29,7 +29,7 @@ const TodoForm = ({ addTodo }) => {
       value = {todo.task}
       onChange={handleTaskInputChange} 
       />
-      <button type='submit'/> 
+      <button type='submit'>submit</button> 
 
     </form>
   )
